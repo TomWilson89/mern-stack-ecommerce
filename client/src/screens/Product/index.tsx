@@ -2,7 +2,8 @@ import React, { FunctionComponent } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Row, Col, Image, ListGroup, Card, Button } from "react-bootstrap";
 import { Rating } from "../../components";
-import products from "../../products";
+import { ProductState } from "./model/products.types";
+import { api } from "../../helpers/api";
 
 type Params = {
   id: string;
@@ -10,8 +11,18 @@ type Params = {
 
 const ProductScreen: FunctionComponent = () => {
   const { id } = useParams<Params>();
+  const [product, setProduct] = React.useState<ProductState>();
 
-  const product = products.find((p) => p._id === id);
+  React.useEffect(() => {
+    const getProduct = async () => {
+      const { data } = await api.get(`/products/${id}`);
+
+      setProduct(data);
+    };
+
+    getProduct();
+  }, [id]);
+
   return !product ? (
     <h1>Not found</h1>
   ) : (

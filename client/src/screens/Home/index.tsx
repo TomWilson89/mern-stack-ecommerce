@@ -1,10 +1,22 @@
 import React, { FunctionComponent } from "react";
-
-import products from "../../products";
 import { Row, Col } from "react-bootstrap";
+
 import { Product } from "../../components";
+import { api } from "../../helpers/api";
+import { ProductState } from "../Product/model/products.types";
 
 const Home: FunctionComponent = () => {
+  const [products, setProducts] = React.useState<ProductState[]>([]);
+
+  React.useEffect(() => {
+    const getList = async () => {
+      const { data } = await api.get("/products");
+
+      setProducts(data);
+    };
+
+    getList();
+  }, []);
   return (
     <>
       <h1>latest products</h1>
