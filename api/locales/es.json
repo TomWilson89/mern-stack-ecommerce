@@ -1,0 +1,7 @@
+{
+  "errors": {
+    "NameIsRequired": "Nombre es requerido",
+    "EmailIsRequired": "Email es requerido",
+    "PasswordIsRequired": "Contraseña es requerida"
+  }
+}
