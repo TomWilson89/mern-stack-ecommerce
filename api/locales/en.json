@@ -2,6 +2,25 @@
   "errors": {
     "NameIsRequired": "Name is required",
     "EmailIsRequired": "Email is required",
-    "PasswordIsRequired": "Password is required"
+    "PasswordIsRequired": "Password is required",
+    "UserIdIsRequired": "User id is required",
+    "ImageIsRequired": "Image is required",
+    "CategoryIsRequired": "Category is required",
+    "DescriptionIsRequired": "Description is required",
+    "RatingIsRequired": "Rating is required",
+    "NumReviewsIsRequired": "Number of reviews is required",
+    "PriceIsRequired": "Price is required",
+    "CountInStockIsRequired": "Count in stock is required",
+    "QuantityIsRequired": "Quantity is required",
+    "AddressIsRequired": "Address is required",
+    "CityIsRequired": "City is required",
+    "PostalCodeIsRequired": "Postal code is required",
+    "CountryIsRequired": "Country is required",
+    "PaymentMethodIsRequired": "Payment method is required",
+    "TaxPriceIsRequired": "Tax price is required",
+    "ShippingPriceIsRequired": "Shipping price is required",
+    "TotalPriceIsRequired": "Total price is required",
+    "IsPaidIsRequired": "Is paid is required",
+    "IsDeliveredIsRequired": "Is delivered is required"
   }
 }

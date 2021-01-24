@@ -2,6 +2,25 @@
   "errors": {
     "NameIsRequired": "Nombre es requerido",
     "EmailIsRequired": "Email es requerido",
-    "PasswordIsRequired": "Contraseña es requerida"
+    "PasswordIsRequired": "Contraseña es requerida",
+    "UserIdIsRequired": "Id del usuario es requerida",
+    "ImageIsRequired": "Imagen es requerida",
+    "CategoryIsRequired": "Categoría es requerida",
+    "DescriptionIsRequired": "Descripción es requerida",
+    "RatingIsRequired": "Rating es requerido",
+    "NumReviewsIsRequired": "Numero de criticás es requerido",
+    "PriceIsRequired": "Precio es requerido",
+    "CountInStockIsRequired": "Numero de stock es requerido",
+    "QuantityIsRequired": "Cantidad es requerido",
+    "AddressIsRequired": "Dirección es requerido",
+    "CityIsRequired": "Ciudad es requerido",
+    "PostalCodeIsRequired": "Codigo postal es requerido",
+    "CountryIsRequired": "País es requerido",
+    "PaymentMethodIsRequired": "Metodo de pago es requerido",
+    "TaxPriceIsRequired": "Precio de impuesto es requerido",
+    "ShippingPriceIsRequired": "Costo de envio es requerido",
+    "TotalPriceIsRequired": "Precio total es requerido",
+    "IsPaidIsRequired": "Está pagado es requerido",
+    "IsDeliveredIsRequired": "Está entregado es requerido"
   }
 }
