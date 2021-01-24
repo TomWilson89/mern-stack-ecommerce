@@ -7,6 +7,9 @@ import mongoSanitize from "express-mongo-sanitize";
 
 import routes from "./routes";
 import config from "./config/config";
+import "./config/database";
+import RouteNotFoundError from "./errors/routeNotFound";
+import errorMiddleware from "./middlewares/error";
 
 class App {
   public app: express.Application;
@@ -32,6 +35,14 @@ class App {
 
     //Route handler
     this.app.use(routes);
+
+    // catch 404 and forward to error handler
+    this.app.use((req, res, next) => {
+      next(new RouteNotFoundError());
+    });
+
+    //error handler
+    this.app.use(errorMiddleware);
   }
 
   public listen() {
