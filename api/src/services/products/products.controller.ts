@@ -1,12 +1,12 @@
 import { Request, Response, NextFunction } from "express";
 
-//TODO change this for import model
-import products from "../../data/products";
 import { async } from "../../middlewares/async";
+import Product from "./products.model";
 
 class ProductControllerClass {
   public list = async(
     async (req: Request, res: Response, next: NextFunction) => {
+      const products = await Product.find();
       res.json(products);
     }
   );
@@ -15,7 +15,8 @@ class ProductControllerClass {
     async (req: Request, res: Response, next: NextFunction) => {
       const { id } = req.params;
 
-      const product = products.find((product) => product._id === id);
+      const product = await Product.findById(id);
+
       res.json(product);
     }
   );

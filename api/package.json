@@ -4,7 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon"
+    "start": "nodemon",
+    "data:import": "ts-node ./src/seeder.ts",
+    "data:delete": "ts-node ./src/seeder.ts -d"
   },
   "dependencies": {
     "argon2": "^0.27.1",
