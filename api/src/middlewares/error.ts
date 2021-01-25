@@ -10,6 +10,7 @@ async function error(
 ) {
   let errors: HttpError[];
 
+  console.log("Error Ocurred", err);
   if (err instanceof Array) errors = err;
   else if (err instanceof HttpError) errors = [err];
   else errors = [new InternalServerError()];
